@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP3.Views.CompraPage"
+             Title="Compras">
+    <StackLayout Padding="10">
+
+        <!-- Formulario de Registro de Compra -->
+        <Entry Placeholder="ID de Usuario" Text="{Binding UsuarioId}" Keyboard="Numeric" />
+        <Entry Placeholder="ID de Producto" Text="{Binding ProductoId}" Keyboard="Numeric" />
+        <Entry Placeholder="Cantidad" Text="{Binding Cantidad}" Keyboard="Numeric" />
+        <Entry Placeholder="Precio Total" Text="{Binding PrecioTotal}" Keyboard="Numeric" />
+
+        <Button Text="Guardar Compra" Command="{Binding SaveCompraCommand}" />
+
+        <!-- Listado de Compras -->
+        <ListView ItemsSource="{Binding Compras}"
+                  SelectedItem="{Binding SelectedCompra}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Id}" Detail="{Binding UsuarioId}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Botones de Acción -->
+        <Button Text="Editar Compra" Command="{Binding EditCompraCommand}" IsEnabled="{Binding IsCompraSelected}" />
+        <Button Text="Eliminar Compra" Command="{Binding DeleteCompraCommand}" IsEnabled="{Binding IsCompraSelected}" />
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP3.Views.UsuarioPage"
+             Title="Usuarios">
+    <StackLayout Padding="10">
+
+        <!-- Formulario de Registro de Usuario -->
+        <Entry Placeholder="Nombre" Text="{Binding Nombre}" />
+        <Entry Placeholder="Apellido" Text="{Binding Apellido}" />
+        <Entry Placeholder="Email" Text="{Binding Email}" />
+        <Entry Placeholder="Contraseña" Text="{Binding Contrasena}" IsPassword="True" />
+        <Entry Placeholder="Ciudad" Text="{Binding Ciudad}" />
+        <Entry Placeholder="Edad" Text="{Binding Edad}" Keyboard="Numeric" />
+        <Picker Title="Género" SelectedItem="{Binding Genero}">
+            <Picker.Items>
+                <x:String>Hombre</x:String>
+                <x:String>Mujer</x:String>
+            </Picker.Items>
+        </Picker>
+        <Entry Placeholder="Institución" Text="{Binding Institucion}" />
+        <Button Text="Guardar Usuario" Command="{Binding SaveUsuarioCommand}" />
+
+        <!-- Listado de Usuarios -->
+        <ListView ItemsSource="{Binding Usuarios}"
+                  SelectedItem="{Binding SelectedUsuario}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nombre}" Detail="{Binding Email}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Botones de Acción -->
+        <Button Text="Editar Usuario" Command="{Binding EditUsuarioCommand}" IsEnabled="{Binding IsUsuarioSelected}" />
+        <Button Text="Eliminar Usuario" Command="{Binding DeleteUsuarioCommand}" IsEnabled="{Binding IsUsuarioSelected}" />
+
+    </StackLayout>
+</ContentPage>

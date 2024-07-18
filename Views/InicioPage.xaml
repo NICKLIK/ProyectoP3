@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP3.Views.InicioPage"
+             BackgroundColor="#F99A47"
+             Title="Inicio">
+    <ScrollView>
+        <VerticalStackLayout Padding="30,10" Spacing="30">
+            <!-- Título -->
+            <Frame BackgroundColor="#033454" CornerRadius="10" Padding="10" Margin="20,0">
+                <Label
+                    Text="Bienvenido a EcuniShop"
+                    FontFamily="Verdana"
+                    FontSize="26"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </Frame>
+
+            <Frame BackgroundColor="#EBF0EF" CornerRadius="10" Padding="30" Margin="25,0" HorizontalOptions="Center">
+                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label
+                    Text="La tienda virtual para el uso de estudiantes de preferencia"
+                    FontFamily="Verdana"
+                     FontSize="20"
+                     FontAttributes="Bold"
+                     TextColor="Black"
+                    HorizontalOptions="Center"
+                     VerticalOptions="Center" />
+
+                    <Image
+                Source="logo.jpg"  
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="230"
+                WidthRequest="230" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Carrusel de fotos -->
+            <VerticalStackLayout>
+                <!-- Texto promocional -->
+                <Frame BackgroundColor="#033454" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                    <Label
+                        Text="Nuestros Articulos"
+                        FontFamily="Verdana"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Frame>
+
+                <BoxView HeightRequest="50" Color="Transparent" />
+
+                <CarouselView x:Name="carouselView" HeightRequest="300" ItemsSource="{Binding Articulos}">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+            </VerticalStackLayout>
+
+            <!-- Pie de página -->
+            <StackLayout HorizontalOptions="Center" VerticalOptions="End" Padding="10" Orientation="Horizontal">
+                <Label Text="Terminos de Uso y Condiciones" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="5,0,0,0" TextColor="#333" />
+                <Label Text="Ecunishop - 2024" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="5,0,0,0" TextColor="#333" />
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

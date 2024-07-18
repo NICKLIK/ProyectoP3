@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP3.Views.ProductoPage"
+             BackgroundColor="#F99A47"
+             Title="Catálogo">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#ffac28" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                    <Label Text="Catálogo de Productos"
+                           FontFamily="Verdana"
+                           FontSize="24"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Frame>
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <Label Text="Descubre todos los productos que se han publicado por muchos estudiantes"
+                       FontFamily="Verdana"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start" />
+
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <Frame BackgroundColor="#FFEBEE" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                    <Label
+                        Text="Entretenimiento"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </Frame>
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <VerticalStackLayout>
+                    <CarouselView HeightRequest="300" ItemsSource="{Binding Entretenimiento}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </VerticalStackLayout>
+
+
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <Frame BackgroundColor="#FFEBEE" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                    <Label
+         Text="Electrodomésticos"
+         FontSize="20"
+         FontAttributes="Bold"
+         TextColor="Black"
+         HorizontalOptions="Center"
+         VerticalOptions="Center" />
+                </Frame>
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <VerticalStackLayout>
+                    <CarouselView HeightRequest="300" ItemsSource="{Binding Electrodomesticos}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </VerticalStackLayout>
+
+
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <Frame BackgroundColor="#FFEBEE" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                    <Label
+           Text="Servicios"
+           FontSize="20"
+           FontAttributes="Bold"
+           TextColor="Black"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+                </Frame>
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <VerticalStackLayout>
+                    <CarouselView HeightRequest="300" ItemsSource="{Binding Servicios}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </VerticalStackLayout>
+
+
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <Frame BackgroundColor="#FFEBEE" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                    <Label
+           Text="Vestimenta"
+           FontSize="20"
+           FontAttributes="Bold"
+           TextColor="Black"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+                </Frame>
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <VerticalStackLayout>
+                    <CarouselView HeightRequest="300" ItemsSource="{Binding Vestimenta}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </VerticalStackLayout>
+
+
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <Frame BackgroundColor="#FFEBEE" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                    <Label
+           Text="Descuentos"
+           FontSize="20"
+           FontAttributes="Bold"
+           TextColor="Black"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+                </Frame>
+                <BoxView HeightRequest="22" Color="Transparent" />
+                <VerticalStackLayout>
+                    <CarouselView HeightRequest="300" ItemsSource="{Binding Descuentos}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageUrl}" Aspect="AspectFit" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <BoxView HeightRequest="40" Color="Transparent" />
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="End" Padding="10" Orientation="Horizontal">
+                        <Label Text="Términos de Uso y Condiciones" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="5,0,0,0" TextColor="White" />
+                        <Label Text="Ecunishop - 2024" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="5,0,0,0" TextColor="White" />
+                    </StackLayout>
+                </VerticalStackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

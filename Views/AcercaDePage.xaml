@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoP3.Views.AcercaDePage"
+             BackgroundColor="#F99A47"
+             Title="Conócenos">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <!-- Título central -->
+            <Frame BackgroundColor="#033454" CornerRadius="20" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                <Label 
+                    Text="Somos EcuniShop"
+                    FontFamily="Verdana"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White" />
+            </Frame>
+
+            <!-- Imagen del logo -->
+            <Image Source="logo.jpg"
+                   Aspect="AspectFit"
+                   HeightRequest="320"
+                   WidthRequest="320"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+
+            <!-- Subtítulo a la izquierda -->
+            <Label 
+                Text="Sobre Nosotros"
+                FontFamily="Verdana"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" />
+
+            <!-- Descripción -->
+            <Frame BackgroundColor="#033454" CornerRadius="8" Padding="10" Margin="0,10,0,0" HasShadow="True">
+                <Label 
+                    Text="EcuniShop es una tienda virtual que impulsa a los estudiantes de todo el Ecuador a realizar y comprar ofertas tanto de productos como servicios. Esta app está pensada para tener un uso mucho más fluido y eficiente que otras aplicaciones similares. Siempre estamos innovando en nuestras tecnologías para ofrecer el mejor servicio posible."
+                    FontSize="16"
+                    FontFamily="Verdana"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    TextColor="White" />
+            </Frame>
+
+            <!-- Pie de página -->
+            <StackLayout HorizontalOptions="Center" VerticalOptions="End" Padding="10" Orientation="Horizontal">
+                <Label Text="Términos de Uso y Condiciones" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="5,0,0,0" TextColor="White" />
+                <Label Text="Ecunishop - 2024" FontSize="16" VerticalOptions="Center" HorizontalOptions="Start" Margin="5,0,0,0" TextColor="White" />
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
